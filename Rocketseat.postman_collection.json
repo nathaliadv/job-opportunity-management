@@ -1,0 +1,264 @@
+{
+	"info": {
+		"_postman_id": "e3addaa4-0b66-4278-a56b-cfc376de3fdb",
+		"name": "Rocketseat",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34733624"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/company/auth",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"admin-tech-solutions\",\n    \"password\": \"bjguygykklmklml;\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/company/auth",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"company",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/company/job/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhdXRoLXNlcnZlciIsImV4cCI6MTcyNjk2MjYwNiwic3ViIjoiYjBjNDI5YTEtMzhkMS00N2U1LWFjOWEtOGE3YTJiZmUzZmQzIiwicm9sZXMiOlsiUk9MRV9DT01QQU5ZIl19.VB8uZduKqWD6qh5pwA_BKO1pgc7Gk1_69WTpSXO7tx4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"description\": \"Backend Java\",\n    \"level\": \"Mid Level\",\n    \"benefits\": \"paid vacation; health plan;\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/company/job/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"company",
+						"job",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/company/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Tech Java\",\n    \"username\": \"admin-tech-java\",\n    \"email\": \"admin_rh@techjava.com\",\n    \"password\": \"dowjdowoqdkow;\",\n    \"website\": \"www.techjava.com\",\n    \"description\": \"Java solutions for your business\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/company/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"company",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/candidate/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"jcsouza\",\n    \"name\": \"José Carlos Souza\",\n    \"email\": \"jc_souza@outlook.com\",\n    \"password\": \"fciejciojiojxois\",\n    \"description\": \"Java Software Developer\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/candidate/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"candidate",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/candidate/auth",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"nathdviana\",\n    \"password\": \"dhuwhduhweu\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/candidate/auth",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"candidate",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/candidate/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhdXRoLXNlcnZlciIsImV4cCI6MTcyNjk3NDM5MSwic3ViIjoiMGI5NmQ2ZWUtZWZlYy00YmMwLWI2YTQtZjMwNDU5MWIzZDBmIiwicm9sZXMiOlsiUk9MRV9DQU5ESURBVEUiXX0.XiyBVyVXHpEso_eY6oJ6R5PCpK04XKDy3p-Bh4LpZFE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/candidate/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"candidate",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/candidate/job",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhdXRoLXNlcnZlciIsImV4cCI6MTcyNzIzNTM1MCwic3ViIjoiMGI5NmQ2ZWUtZWZlYy00YmMwLWI2YTQtZjMwNDU5MWIzZDBmIiwicm9sZXMiOlsiUk9MRV9DQU5ESURBVEUiXX0.Np7pYTfoCjQG_192OWazcS9W4LSVmHAyAkn4jbJULcc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/candidate/job?filter=QA",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"candidate",
+						"job"
+					],
+					"query": [
+						{
+							"key": "filter",
+							"value": "QA"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/candidate/job/apply",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhdXRoLXNlcnZlciIsImV4cCI6MTcyNzIzNTM1MCwic3ViIjoiMGI5NmQ2ZWUtZWZlYy00YmMwLWI2YTQtZjMwNDU5MWIzZDBmIiwicm9sZXMiOlsiUk9MRV9DQU5ESURBVEUiXX0.Np7pYTfoCjQG_192OWazcS9W4LSVmHAyAkn4jbJULcc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\"0b7eb246-842b-49b6-9c33-ea65b8b9e150\"\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/candidate/job/apply",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"candidate",
+						"job",
+						"apply"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
