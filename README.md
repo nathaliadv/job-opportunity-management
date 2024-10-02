@@ -11,7 +11,7 @@ This project is the backend system for managing job opportunities. It allows can
 
 ## Technologies Used
 
-- **Java 17**
+- **Java 21**
 - **Spring Boot**
 - **Spring Data JPA**
 - **Hibernate**
