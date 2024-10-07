@@ -1,5 +1,6 @@
 package com.nadantas.jobopportunitymanagement.modules.candidate.useCases;
 
+import com.nadantas.jobopportunitymanagement.exceptions.UserNotFoundException;
 import com.nadantas.jobopportunitymanagement.modules.candidate.dto.ProfileCandidateResponseDTO;
 import com.nadantas.jobopportunitymanagement.modules.candidate.entities.Candidate;
 import com.nadantas.jobopportunitymanagement.modules.candidate.repositories.CandidateRepository;
@@ -9,7 +10,6 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
 import java.util.Optional;
 import java.util.UUID;
@@ -49,7 +49,7 @@ public class ProfileCandidateUseCaseTest {
         try {
             profileCandidateUseCase.execute(id);
         } catch (Exception e) {
-            assertThat(e).isInstanceOf(UsernameNotFoundException.class);
+            assertThat(e).isInstanceOf(UserNotFoundException.class);
             assertThat(e.getMessage()).isEqualTo("User not found.");
         }
     }
