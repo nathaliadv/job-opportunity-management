@@ -20,6 +20,17 @@ This project is the backend system for managing job opportunities. It allows can
 - **Spring Security** (for authentication and authorization)
 - **Maven** (Build tool)
 - **JUnit** (Testing framework)
+- **SonarQube** (Code quality analysis)
+- **JaCoCo** (Code coverage reporting)
+- **Spring Boot Actuator** (Application health monitoring)
+- **Prometheus** (Metrics collection)
+- **Grafana** (Metrics visualization)
+
+Monitoring and Code Quality:
+- SonarQube: The project integrates with SonarQube for code quality analysis, ensuring that the codebase follows best practices.
+- JaCoCo: Code coverage is measured with JaCoCo, helping to maintain test coverage quality.
+- Spring Boot Actuator: Provides endpoints to monitor application health and metrics.
+- Prometheus & Grafana: The project includes Prometheus for scraping application metrics, which are visualized in Grafana for monitoring the health and performance of the application.
 
 ## Getting Started
 
@@ -27,7 +38,7 @@ This project is the backend system for managing job opportunities. It allows can
 
 - Java 21 or higher
 - Maven 3.8 or higher
-- Docker (for running PostgreSQL)
+- Docker (for running PostgreSQL, SonarQube, Prometheus and Grafana)
 
 ### Installation
 
