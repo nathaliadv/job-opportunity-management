@@ -1,15 +1,28 @@
-FROM ubuntu:latest AS build
+# Use an official Java 21 image for building
+FROM openjdk:21-jdk-slim AS build
 
-RUN apt-get update
-RUN apt-get install openjdk-17-jdk -y
+# Install Maven
+RUN apt-get update && \
+    apt-get install -y maven && \
+    rm -rf /var/lib/apt/lists/*
+
+# Set work directory
+WORKDIR /app
+
+# Copy project files
 COPY . .
 
-RUN apt-get install maven -y
+# Build the project
 RUN mvn clean install
 
-FROM openjdk-17-jdk-slim
+# Run Stage
+FROM openjdk:21-jdk-slim
+
+# Expose application port
 EXPOSE 8080
 
-COPY --from=build /target/job-opportunity-management-0.0.1.jar app.jar
+# Copy the JAR file from the build stage
+COPY --from=build /app/target/job-opportunity-management-0.0.1.jar app.jar
 
-ENTRYPOINT [ "java", "-jar", "app.jar" ]
+# Run the application
+ENTRYPOINT ["java", "-jar", "app.jar"]
