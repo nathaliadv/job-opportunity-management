@@ -32,6 +32,11 @@ Monitoring and Code Quality:
 - Spring Boot Actuator: Provides endpoints to monitor application health and metrics.
 - Prometheus & Grafana: The project includes Prometheus for scraping application metrics, which are visualized in Grafana for monitoring the health and performance of the application.
 
+
+Deployment:
+
+This project is deployed on Render. You can make requests to the application at the following URL: https://job-opportunity-management.onrender.com.
+
 ## Getting Started
 
 ### Prerequisites
